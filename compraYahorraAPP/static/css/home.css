@@ -1,9 +1,157 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;                 /* Flexbox para dividir las columnas */
+    height: 100vh;                 /* Altura de toda la pantalla */
+    justify-content: center;       /* Centra horizontalmente */
+    align-items: center;           /* Centra verticalmente */
+    width: 80%;  
+}
+
+/* Sección izquierda */
+.left-section {
+    flex: 1;                        /* Ocupa el 50% del espacio disponible */
+    background-color: #fff;      /* Color de fondo */
+    padding: 50px;
+    height: 80%;
+    border-top-left-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
+    border-bottom-left-radius: 50px; 
+    
+    
+}
+
+/* Sección derecha */
+.right-section {
+    flex: 1;                        /* Ocupa el 50% del espacio disponible */
+    background-color: #ddd;         /* Color de fondo */
+    height: 80%;
+    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
+    border-bottom-right-radius: 50px; 
+    display: flex;                 /* Hacer que la imagen se ajuste dentro de esta sección */
+    justify-content: center;       /* Centra la imagen horizontalmente */
+    align-items: center;                    /* Ancho del contenedor (puedes ajustarlo) */
+}
+
+.right-section img {
+    width: 100%;                   /* Imagen ocupa el 100% del contenedor */
+    height: 100%;                  /* Mantener la relación de aspecto */
+    object-fit: cover; 
+    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
+    border-bottom-right-radius: 50px;             /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+body{
+    background-color: #adb5bd;      /* Color de fondo */
+}
+
+.titulo{
+    font-family: "DM Serif Text", serif;
+    font-weight: bold;
+}
+
+.texto{
+    font-family: "DM Serif Text", serif;
+    font-weight: bold;
+
+}
+
+.card {
+    width: 70%;
+    height: 70%;
+    border: none;                 /* Ancho de la card */
+    background-color: #fff;       /* Fondo blanco para la card */
+    border-radius: 8px;           /* Bordes redondeados */
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
     text-align: center;
 }
 
-h1 {
-    color: #333;
+.btn-custom-login {
+    background-color: black;  /* Color de fondo personalizado */
+    border: none;               /* Sin bordes */
+    color: white;               /* Color del texto */
+    padding: 12px 30px;         /* Espaciado interno */
+    font-size: 10px;            /* Tamaño de la fuente */
+    border-radius: 40px;        /* Bordes redondeados */
+    text-transform: uppercase;  /* Convertir el texto a mayúsculas */
+    letter-spacing: 2px;        /* Espaciado entre letras */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%;
 }
+
+/* Efecto hover */
+.btn-custom-login:hover {
+    background-color: gray;
+    color: black;  /* Cambiar color en hover */
+}
+
+.btn-custom-register {
+    background-color: black;  /* Color de fondo personalizado */
+    border: none;               /* Sin bordes */
+    color: white;               /* Color del texto */
+    padding: 12px 30px;         /* Espaciado interno */
+    font-size: 10px;            /* Tamaño de la fuente */
+    border-radius: 40px;        /* Bordes redondeados */
+    text-transform: uppercase;  /* Convertir el texto a mayúsculas */
+    letter-spacing: 2px;        /* Espaciado entre letras */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%;
+}
+
+/* Efecto hover */
+.btn-custom-register:hover {
+    background-color: gray;
+    color: black;  /* Cambiar color en hover */
+}
+
+/* input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+} */
+
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-icon input {
+  padding-left: 30px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.input-icon2 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-icon2 i {
+    position: absolute;
+    left: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .input-icon2 input {
+    padding-left: 30px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
