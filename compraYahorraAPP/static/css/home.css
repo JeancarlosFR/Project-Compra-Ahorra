@@ -20,8 +20,31 @@
 }
 
 /* Sección derecha */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: end;
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* Un fondo semi-transparente opcional */
+    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
+    border-bottom-right-radius: 50px; 
+}
+
 .right-section {
-    flex: 1;                        /* Ocupa el 50% del espacio disponible */
+    flex: 2; 
+    position: relative;                       /* Ocupa el 50% del espacio disponible */
     background-color: #ddd;         /* Color de fondo */
     height: 80%;
     border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
@@ -85,10 +108,10 @@ body{
     color: black;  /* Cambiar color en hover */
 }
 
-.btn-custom-register {
-    background-color: black;  /* Color de fondo personalizado */
-    border: none;               /* Sin bordes */
-    color: white;               /* Color del texto */
+.btn-custom-google {
+    background-color: white;  /* Color de fondo personalizado */
+    border: solid 1px black;               /* Sin bordes */
+    color: black;               /* Color del texto */
     padding: 12px 30px;         /* Espaciado interno */
     font-size: 10px;            /* Tamaño de la fuente */
     border-radius: 40px;        /* Bordes redondeados */
@@ -99,7 +122,27 @@ body{
 }
 
 /* Efecto hover */
-.btn-custom-register:hover {
+.btn-custom-google:hover {
+    background-color: gray;
+    color: black;  /* Cambiar color en hover */
+}
+
+
+.btn-custom-right {
+    background-color: black;  /* Color de fondo personalizado */
+    border: solid 2px white;
+    color: white;               /* Color del texto */
+    padding: 12px 30px;         /* Espaciado interno */
+    font-size: 10px;            /* Tamaño de la fuente */
+    border-radius: 40px;        /* Bordes redondeados */
+    text-transform: uppercase;  /* Convertir el texto a mayúsculas */
+    letter-spacing: 2px;        /* Espaciado entre letras */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 20%;
+}
+
+/* Efecto hover */
+.btn-custom-right:hover {
     background-color: gray;
     color: black;  /* Cambiar color en hover */
 }
@@ -112,6 +155,28 @@ body{
     border-radius: 5px;
     color: black;
 } */
+
+.btn-icon{
+    position: relative;
+    width: 100%;
+}
+
+.btn-icon svg{
+    position: absolute;
+    top: 50%;
+    padding-right: 58px;
+    height: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.btn-icon button{
+    padding-left: 30px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 40px;
+}
 
 .input-icon {
   position: relative;
@@ -154,4 +219,6 @@ body{
     border: 1px solid black;
     border-radius: 5px;
   }
+
+  
 
