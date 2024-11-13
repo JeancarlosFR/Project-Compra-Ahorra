@@ -1,30 +1,34 @@
 /* Estilo para el contenedor principal */
 .container {
-    display: flex;                 /* Flexbox para dividir las columnas */
-    height: 100vh;                 /* Altura de toda la pantalla */
-    justify-content: center;       /* Centra horizontalmente */
-    align-items: center;           /* Centra verticalmente */
-    width: 80%;  
+    display: flex;  
+    flex-wrap: wrap; /* Flexbox para dividir las columnas */
+    height: 100vh; /* Altura de toda la pantalla */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 90%;  
+    max-width: 100%;
+    padding: 1rem; /* Añadir padding para evitar que los elementos toquen los bordes */
+    box-sizing: border-box;
 }
 
 /* Sección izquierda */
 .left-section {
-    flex: 1;                        /* Ocupa el 50% del espacio disponible */
-    background-color: #fff;      /* Color de fondo */
-    padding: 50px;
-    height: 80%;
-    border-top-left-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
-    border-bottom-left-radius: 50px; 
-    
-    
+    flex: 1;
+    background-color: #fff;
+    padding: 3rem;
+    height: 100%; /* Cambia el 80% a 100% para que ambas secciones sean iguales */
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
 }
 
-/* Sección derecha */
 .background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
 }
+
 
 .overlay-content {
     position: absolute;
@@ -34,32 +38,34 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     align-items: end;
     color: white;
-    background: rgba(0, 0, 0, 0.4); /* Un fondo semi-transparente opcional */
-    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
-    border-bottom-right-radius: 50px; 
+    background: rgba(0, 0, 0, 0.4);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding: 1rem;
 }
 
+/* Sección derecha */
 .right-section {
-    flex: 2; 
-    position: relative;                       /* Ocupa el 50% del espacio disponible */
-    background-color: #ddd;         /* Color de fondo */
-    height: 80%;
-    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
-    border-bottom-right-radius: 50px; 
-    display: flex;                 /* Hacer que la imagen se ajuste dentro de esta sección */
-    justify-content: center;       /* Centra la imagen horizontalmente */
-    align-items: center;                    /* Ancho del contenedor (puedes ajustarlo) */
+    flex: 1; /* Para que ocupe el mismo espacio horizontal que la izquierda */
+    position: relative;
+    background-color: #ddd;
+    height: 100%; /* Cambia el 80% a 100% para igualar la altura de ambas secciones */
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Imagen dentro de la sección derecha */
 .right-section img {
-    width: 100%;                   /* Imagen ocupa el 100% del contenedor */
-    height: 100%;                  /* Mantener la relación de aspecto */
-    object-fit: cover; 
-    border-top-right-radius: 50px;                  /* Ancho del contenedor (puedes ajustarlo) */
-    border-bottom-right-radius: 50px;             /* Asegura que la imagen cubra el área sin deformarse */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra toda el área de la sección sin deformarse */
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
 }
 
 body{
@@ -69,7 +75,25 @@ body{
 .titulo{
     font-family: "DM Serif Text", serif;
     font-weight: bold;
+    background-color: orange;
+    border-radius: 4rem;
+    padding: 5px;
+    width: 40%;
+    text-align: center;
 }
+
+
+#saludo{
+    font-family: "DM Serif Text", serif;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 4rem;
+    padding: 5px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
 
 .texto{
     font-family: "DM Serif Text", serif;
@@ -82,20 +106,21 @@ body{
     height: 70%;
     border: none;                 /* Ancho de la card */
     background-color: #fff;       /* Fondo blanco para la card */
-    border-radius: 8px;           /* Bordes redondeados */
     display: flex;
     margin: auto;
     margin-top: 10%;
     text-align: center;
+    justify-content: center;
 }
 
+
 .btn-custom-login {
-    background-color: black;  /* Color de fondo personalizado */
+    background-color: orange;  /* Color de fondo personalizado */
     border: none;               /* Sin bordes */
-    color: white;               /* Color del texto */
-    padding: 12px 30px;         /* Espaciado interno */
-    font-size: 10px;            /* Tamaño de la fuente */
-    border-radius: 40px;        /* Bordes redondeados */
+    color: black;               /* Color del texto */
+    padding: 0.8rem 2rem;         /* Espaciado interno */
+    font-size: 0.7rem;            /* Tamaño de la fuente */
+    border-radius: 3rem;        /* Bordes redondeados */
     text-transform: uppercase;  /* Convertir el texto a mayúsculas */
     letter-spacing: 2px;        /* Espaciado entre letras */
     transition: background-color 0.3s ease; /* Transición suave */
@@ -104,26 +129,25 @@ body{
 
 /* Efecto hover */
 .btn-custom-login:hover {
-    background-color: gray;
-    color: black;  /* Cambiar color en hover */
+    background-color: black;
+    color: white;  /* Cambiar color en hover */
 }
 
 .btn-custom-google {
     background-color: white;  /* Color de fondo personalizado */
     border: solid 1px black;               /* Sin bordes */
     color: black;               /* Color del texto */
-    padding: 12px 30px;         /* Espaciado interno */
-    font-size: 10px;            /* Tamaño de la fuente */
-    border-radius: 40px;        /* Bordes redondeados */
+    font-size: 0.6rem;            /* Tamaño de la fuente */
+    border-radius: 3rem;        /* Bordes redondeados */
     text-transform: uppercase;  /* Convertir el texto a mayúsculas */
-    letter-spacing: 2px;        /* Espaciado entre letras */
+    letter-spacing: 2px;          /* Espaciado entre letras */
     transition: background-color 0.3s ease; /* Transición suave */
     width: 100%;
 }
 
 /* Efecto hover */
 .btn-custom-google:hover {
-    background-color: gray;
+    background-color: orange;
     color: black;  /* Cambiar color en hover */
 }
 
@@ -132,9 +156,9 @@ body{
     background-color: black;  /* Color de fondo personalizado */
     border: solid 2px white;
     color: white;               /* Color del texto */
-    padding: 12px 30px;         /* Espaciado interno */
-    font-size: 10px;            /* Tamaño de la fuente */
-    border-radius: 40px;        /* Bordes redondeados */
+    padding: 0.8rem 2rem;         /* Espaciado interno */
+    font-size: 0.7rem;            /* Tamaño de la fuente */
+    border-radius: 3rem;        /* Bordes redondeados */
     text-transform: uppercase;  /* Convertir el texto a mayúsculas */
     letter-spacing: 2px;        /* Espaciado entre letras */
     transition: background-color 0.3s ease; /* Transición suave */
@@ -143,8 +167,8 @@ body{
 
 /* Efecto hover */
 .btn-custom-right:hover {
-    background-color: gray;
-    color: black;  /* Cambiar color en hover */
+    background-color: orange;
+    color: white;  /* Cambiar color en hover */
 }
 
 /* input[type="email"], input[type="password"] {
@@ -157,26 +181,25 @@ body{
 } */
 
 .btn-icon{
-    position: relative;
-    width: 100%;
+    display: flex; /* Para alinear el contenido en fila */
+    align-items: center; /* Alinea el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 0.5rem 1rem; /* Ajusta el espacio interno del botón */
+    border: none;
+    color: black; /* Color del texto */
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .btn-icon svg{
-    position: absolute;
-    top: 50%;
-    padding-right: 58px;
-    height: 20px;
-    transform: translateY(-50%);
-    pointer-events: none;
+    padding: 4px;
+    width: 3em; /* Tamaño del ícono */
+    height: 3em;
+    fill: currentColor; /* Para que tome el color del texto del botón */
+    vertical-align: middle; /* Asegura la alineación vertical */
 }
 
-.btn-icon button{
-    padding-left: 30px;
-    width: 100%;
-    padding: 8px;
-    border: 1px solid black;
-    border-radius: 40px;
-}
+
 
 .input-icon {
   position: relative;
@@ -192,7 +215,7 @@ body{
 }
 
 .input-icon input {
-  padding-left: 30px;
+  padding-left: 2rem;
   width: 100%;
   padding: 8px;
   border: 1px solid black;
@@ -213,12 +236,41 @@ body{
   }
   
   .input-icon2 input {
-    padding-left: 30px;
     width: 100%;
     padding: 8px;
     border: 1px solid black;
     border-radius: 5px;
   }
+
+
+  /* Responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a una columna */
+        height: auto; /* Permite que el contenido crezca */
+        width: 100%;
+    }
+    
+    .left-section, .right-section {
+        flex: 1 1 100%; /* Cada sección ocupará el 100% en pantallas pequeñas */
+        max-width: 100%; /* Ajusta el ancho máximo */
+        margin: 0;
+        padding: 1rem;
+        border-radius: 1rem; /* Ajusta el borde redondeado */
+    }
+    
+    .overlay-content {
+        padding: 1rem;
+        align-items: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+    .btn-custom-right {
+        width: 50%; /* Haz que el botón ocupe el 50% del ancho */
+    }
+}
+
+
+
 
   
 
